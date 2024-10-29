@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Veterinarios</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Veterinarios</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Nuestros Veterinarios</h2>
+            <ul>
+                {% for vet in veterinarians %}
+                <li>
+                    {{ vet.firstname }} {{ vet.lastname }}
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section>
+            <img src="{% static 'perrito.png' %}" alt="Perrito">
+        </section>
+    </main>
+</body>
+</html>
